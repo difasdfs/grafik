@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        
+    </head>
+    <style>
+        .lebar-grafik{
+            width: 500px;
+        }
+    </style>
+    <body>
+        <div class="lebar-grafik">
+            <canvas id="myChart" width="200" height="200"></canvas>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>
+            var ctx = document.getElementById('myChart').getContext('2d');
+            var myChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange', 'Kopo'],
+                    datasets: [{
+                        label: 'Grafik Penjualan',
+                        data: [12, 17, 3, 5, 2, 3, 10],
+                        backgroundColor: [
+                            'r#90c44c',
+                            '#90c44c',
+                            '#90c44c',
+                            '#90c44c',
+                            '#90c44c',
+                            '#90c44c'
+                        ],
+                        borderColor: [
+                            '#90c44c',
+                            '#90c44c',
+                            '#90c44c',
+                            '#90c44c',
+                            '#90c44c',
+                            '#90c44c'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>
